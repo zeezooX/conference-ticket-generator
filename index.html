@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Conference ticket generator</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Ziyad Eslam</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Conference ticket generator</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="./assets/images/logo-full.svg"
+        alt="Coding Conf Logo"
+        class="logo"
+      />
+      <h1 class="title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p class="description">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+      <form class="form">
+        <div class="form-group">
+          <label for="avatar">Upload Avatar</label>
+          <input type="file" id="avatar" accept="image/*" />
+          <span id="file-info"
+            >
+            <img
+              src="./assets/images/icon-info.svg"
+              alt="File Info"
+              class="icon-info"
+            />
+            Upload your photo (JPG or PNG, max size: 500KB).</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="example@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" placeholder="@yourusername" />
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Generate My Ticket" />
+        </div>
+      </form>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Ziyad Eslam</a>.
+    </div>
+  </body>
 </html>
