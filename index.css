@@ -99,4 +99,12 @@ form {
   body {
     background-image: url('./assets/images/background-mobile.png');
   }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    max-width: 90%;
+  };
 }
