@@ -38,7 +38,7 @@ h1 {
 }
 
 p {
-  color: white;
+  color: hsl(252, 6%, 83%);
   font-family: 'Inconsolata', sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -46,14 +46,36 @@ p {
   text-align: center;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
 label {
   display: block;
   margin-bottom: 8px;
   color: white;
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
 }
 
-#file-info {
-  color: white;
+form {
+  width: 400px;
+}
+
+.file-info {
+  color: hsl(252, 6%, 83%);
+  margin-top: 5px;
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.icon-info {
+  width: 10px;
+  height: 10px;
+  color: hsl(252, 6%, 83%);
 }
 
 #avatar {
