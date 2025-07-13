@@ -1,2 +1,21 @@
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; color: white; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+  background-image: url('./assets/images/background-desktop.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (max-width: 750px) {
+  body {
+    background-image: url('./assets/images/background-tablet.png');
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url('./assets/images/background-mobile.png');
+  }
+}
