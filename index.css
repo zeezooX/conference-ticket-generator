@@ -139,6 +139,8 @@ form {
   background-color: hsl(245, 19%, 35%, 0.5);
   color: white;
   box-sizing: border-box;
+  max-width: 72px;
+  max-height: 72px;
 }
 
 /* Icons */
