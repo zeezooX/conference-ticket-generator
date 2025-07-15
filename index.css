@@ -56,15 +56,6 @@ h1 {
   margin-bottom: -5px;
 }
 
-p {
-  color: hsl(252, 6%, 83%);
-  font-family: 'Inconsolata', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  max-width: 600px;
-  text-align: center;
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -81,6 +72,15 @@ label {
 
 form {
   width: 400px;
+}
+
+.description {
+  color: hsl(252, 6%, 83%);
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 600px;
+  text-align: center;
 }
 
 .file-info {
@@ -167,7 +167,7 @@ form {
     font-size: 32px;
   }
 
-  p {
+  .description {
     max-width: 90%;
   }
 }
