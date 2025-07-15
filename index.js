@@ -1,37 +1,57 @@
 const infoIcon =
   '<img src="./assets/images/icon-info.svg" alt="File Info" class="icon-info"/> ';
+const fileUpload = document.getElementsByClassName("file-upload")[0];
+const fileInput = document.getElementsByClassName("file-input")[0];
 
-document
-  .getElementsByClassName("file-upload")[0]
-  .addEventListener("click", function () {
-    document.getElementsByClassName("file-input")[0].click();
-  });
+fileUpload.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  fileUpload.classList.add("dragover");
+  fileUpload.style.backgroundColor = "hsla(245, 19%, 35%, 0.6)";
+});
 
-document
-  .getElementsByClassName("file-input")[0]
-  .addEventListener("change", function (event) {
-    const file = event.target.files[0];
-    const avatarMessage = document.getElementById("avatar-message");
-    const uploadIcon = document.getElementsByClassName("icon-upload")[0];
-    if (file) {
-      if (file.size > 500 * 1024) {
-        avatarMessage.innerHTML =
-          infoIcon + "File too large. Please upload a photo than 500KB.";
-        avatarMessage.style.color = "red";
-        uploadIcon.src = "./assets/images/icon-upload.svg";
-        event.target.value = "";
-        return;
-      }
+fileUpload.addEventListener("dragleave", (e) => {
+  e.preventDefault();
+  fileUpload.style.backgroundColor = "hsla(245, 19%, 35%, 0.1)";
+});
+
+fileUpload.addEventListener("drop", (e) => {
+  e.preventDefault();
+  fileUpload.style.backgroundColor = "hsla(245, 19%, 35%, 0.1)";
+  if (e.dataTransfer.files?.[0]) {
+    const dt = new DataTransfer();
+    dt.items.add(e.dataTransfer.files[0]);
+    fileInput.files = dt.files;
+    fileInput.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+});
+
+fileUpload.addEventListener("click", function () {
+  fileInput.click();
+});
+
+fileInput.addEventListener("change", function (event) {
+  const file = event.target.files[0];
+  const avatarMessage = document.getElementById("avatar-message");
+  const uploadIcon = document.getElementsByClassName("icon-upload")[0];
+  if (file) {
+    if (file.size > 500 * 1024) {
       avatarMessage.innerHTML =
-        infoIcon + "Upload your photo (JPG or PNG, max size: 500KB).";
-      avatarMessage.style.color = "hsl(252, 6%, 83%)";
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        uploadIcon.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
+        infoIcon + "File too large. Please upload a photo than 500KB.";
+      avatarMessage.style.color = "red";
+      uploadIcon.src = "./assets/images/icon-upload.svg";
+      event.target.value = "";
+      return;
     }
-  });
+    avatarMessage.innerHTML =
+      infoIcon + "Upload your photo (JPG or PNG, max size: 500KB).";
+    avatarMessage.style.color = "hsl(252, 6%, 83%)";
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      uploadIcon.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
 
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault();
@@ -53,7 +73,8 @@ document.querySelector("form").addEventListener("submit", function (event) {
     avatarMessage.style.color = "red";
     hasError = true;
   } else {
-    avatarMessage.innerHTML = infoIcon + "Upload your photo (JPG or PNG, max size: 500KB).";
+    avatarMessage.innerHTML =
+      infoIcon + "Upload your photo (JPG or PNG, max size: 500KB).";
     avatarMessage.style.color = "hsl(252, 6%, 83%)";
   }
   if (!nameInput) {
@@ -90,7 +111,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
       name: nameInput,
       email: emailInput,
       github: githubInput,
-      avatar: e.target.result
+      avatar: e.target.result,
     });
     window.location.href = `ticket.html?${params.toString()}`;
   };
