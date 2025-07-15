@@ -42,6 +42,11 @@ fileInput.addEventListener("change", function (event) {
       event.target.value = "";
       return;
     }
+    if (!file.type.startsWith("image/") || !["image/jpeg", "image/png"].includes(file.type)) {
+      uploadIcon.src = "./assets/images/icon-upload.svg";
+      event.target.value = "";
+      return;
+    }
     avatarMessage.innerHTML =
       infoIcon + "Upload your photo (JPG or PNG, max size: 500KB).";
     avatarMessage.style.color = "hsl(252, 6%, 83%)";
