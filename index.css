@@ -231,4 +231,8 @@ form {
   .description {
     max-width: 90%;
   }
+
+  form {
+    max-width: 90%;
+  }
 }
