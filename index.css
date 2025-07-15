@@ -110,13 +110,57 @@ form {
 
 @media (max-width: 750px) {
   body {
-    background-image: url('./assets/images/background-tablet.png');
+    background-image:
+      url('./assets/images/pattern-circle.svg'),
+      url('./assets/images/pattern-circle.svg'),
+      url('./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg'),
+      url('./assets/images/pattern-squiggly-line-top.svg'),
+      url('./assets/images/pattern-lines.svg'),
+      url('./assets/images/background-tablet.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:
+      auto,
+      auto,
+      auto,
+      auto,
+      auto,
+      cover;
+    background-position:
+      1100px 350px,
+      50px -100px,
+      bottom left,
+      top right,
+      top center,
+      center;
   }
 }
 
 @media (max-width: 500px) {
   body {
-    background-image: url('./assets/images/background-mobile.png');
+    background-image:
+      url('./assets/images/pattern-circle.svg'),
+      url('./assets/images/pattern-circle.svg'),
+      url('./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg'),
+      url('./assets/images/pattern-squiggly-line-top.svg'),
+      url('./assets/images/pattern-lines.svg'),
+      url('./assets/images/background-mobile.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:
+      auto,
+      auto,
+      80%,
+      auto,
+      auto,
+      cover;
+    background-position:
+      400px 600px,
+      -50px -50px,
+      bottom left,
+      top right,
+      top center,
+      center;
   }
 
   h1 {
