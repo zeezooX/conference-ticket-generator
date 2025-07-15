@@ -1,19 +1,10 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  color: white;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 @font-face {
   font-family: 'Inconsolata';
   src: url('./assets/fonts/Inconsolata-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: 400 800;
 }
 
+/* Base Elements */
 body {
   background-image:
     url('./assets/images/pattern-circle.svg'),
@@ -40,17 +31,6 @@ body {
     center;
 }
 
-input {
-  font-family: 'Inconsolata', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  background-color: hsl(255, 11%, 93%, 0.1);
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
-  border: 2px solid hsl(245, 15%, 58%);
-}
-
 h1 {
   color: white;
   font-family: 'Inconsolata', sans-serif;
@@ -69,14 +49,27 @@ label {
   font-weight: 400;
 }
 
+input {
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: hsl(255, 11%, 93%, 0.1);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid hsl(245, 15%, 58%);
+}
+
 form {
   width: 400px;
 }
 
-.logo {
-  width: 150px;
-  height: auto;
-  margin: 20px;
+/* Layout Containers */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-group {
@@ -85,6 +78,7 @@ form {
   margin-top: 20px;
 }
 
+/* Typography & Info */
 .description {
   color: hsl(252, 6%, 83%);
   font-family: 'Inconsolata', sans-serif;
@@ -102,19 +96,32 @@ form {
   font-size: 10px;
 }
 
-.icon-info {
-  width: 10px;
-  height: 10px;
+.file-name {
+  margin-top: 10px;
   color: hsl(252, 6%, 83%);
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Buttons & Interactions */
+.submit {
+  background-color: hsl(7, 88%, 67%);
+  color: hsl(248, 70%, 10%);
+  font-weight: 600;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 0.5px solid hsl(245, 15%, 58%);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
 
+.submit:hover {
+  background-color: hsl(7, 71%, 60%);
+  color: white;
+}
+
+/* File Upload */
 .file-upload {
   background-color: hsla(245, 19%, 35%, 0.1);
   color: white;
@@ -134,30 +141,32 @@ form {
   box-sizing: border-box;
 }
 
-.file-name {
-  margin-top: 10px;
+/* Icons */
+.icon-info {
+  width: 10px;
+  height: 10px;
   color: hsl(252, 6%, 83%);
-  font-family: 'Inconsolata', sans-serif;
-  font-weight: 400;
 }
 
-.submit {
-  background-color: hsl(7, 88%, 67%);
-  color: hsl(248, 70%, 10%);
-  font-weight: 600;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  border: 0.5px solid hsl(245, 15%, 58%);
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+/* Logo */
+.logo {
+  width: 150px;
+  height: auto;
+  margin: 20px;
 }
 
-.submit:hover {
-  background-color: hsl(7, 71%, 60%);
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
   color: white;
 }
 
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Responsive Media Queries */
 @media (max-width: 750px) {
   body {
     background-image:
