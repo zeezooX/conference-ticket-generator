@@ -40,10 +40,12 @@ body {
     center;
 }
 
-.logo {
-  width: 150px;
-  height: auto;
-  margin: 20px;
+input {
+  background-color: hsl(255, 11%, 93%, 0.1);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid hsl(245, 15%, 58%);
 }
 
 h1 {
@@ -56,12 +58,6 @@ h1 {
   margin-bottom: -5px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
 label {
   display: block;
   margin-bottom: 8px;
@@ -72,6 +68,18 @@ label {
 
 form {
   width: 400px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .description {
@@ -110,7 +118,6 @@ form {
   border: 2px dashed hsl(245, 15%, 58%);
   border-radius: 10px;
   padding: 12px;
-  margin-top: 10px;
   text-align: center;
   cursor: pointer;
 }
