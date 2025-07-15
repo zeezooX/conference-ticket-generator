@@ -83,7 +83,7 @@ form {
   text-align: center;
 }
 
-.file-info {
+.input-info {
   color: hsl(252, 6%, 83%);
   margin-top: 5px;
   font-family: 'Inconsolata', sans-serif;
@@ -97,15 +97,38 @@ form {
   color: hsl(252, 6%, 83%);
 }
 
-#avatar {
-  color: white;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.file-upload {
+  background-color: hsla(245, 19%, 35%, 0.1);
+  color: white;
+  border: 2px dashed hsl(245, 15%, 58%);
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon-upload {
+  padding: 6px;
+  border: 1px solid hsl(245, 15%, 58%);
+  border-radius: 10px;
+  background-color: hsl(245, 19%, 35%, 0.5);
+  color: white;
+  box-sizing: border-box;
+}
+
+.file-name {
+  margin-top: 10px;
+  color: hsl(252, 6%, 83%);
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
 }
 
 @media (max-width: 750px) {
