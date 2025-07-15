@@ -41,6 +41,9 @@ body {
 }
 
 input {
+  font-family: 'Inconsolata', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   background-color: hsl(255, 11%, 93%, 0.1);
   color: white;
   border-radius: 10px;
@@ -136,6 +139,23 @@ form {
   color: hsl(252, 6%, 83%);
   font-family: 'Inconsolata', sans-serif;
   font-weight: 400;
+}
+
+.submit {
+  background-color: hsl(7, 88%, 67%);
+  color: hsl(248, 70%, 10%);
+  font-weight: 600;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 0.5px solid hsl(245, 15%, 58%);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.submit:hover {
+  background-color: hsl(7, 71%, 60%);
+  color: white;
 }
 
 @media (max-width: 750px) {
