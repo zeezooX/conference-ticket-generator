@@ -1,4 +1,4 @@
-#ticket-name {
+.header-name {
   background: linear-gradient(90deg, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6,6 +6,6 @@
   color: transparent;
 }
 
-#ticket-email {
+.description-email {
   color: hsl(7, 71%, 60%);
 }
